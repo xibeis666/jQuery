@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // 子代选择器 $('ul>li')  
+        // 后代选择器 $('ul li')
+        $(function () {
+            // 获取id为father这个元素的所有子div
+            console.log($('#father > div'));
+            // console.log($('#father > div,p'));// 获取id为father的子div以及页面上所有p
+            // 获取id为father这个元素的所有后代div
+            console.log($('#father div'));
+        });
+    </script>
+</head>
+
+<body>
+    <p></p>
+    <div id="father">
+        <div>
+            <span>span1</span>
+            <span>span2</span>
+            <span>span3</span>
+        </div>
+        <div>
+            <b>1</b>
+            <div>div1</div>
+            <div>div2</div>
+            <div>div3</div>
+            <p></p>
+        </div>
+        <div></div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <span>sss1</span>
+    </div>
+</body>
+
+</html>

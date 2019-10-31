@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // 获取文本
+            $('#get').click(function () {
+                // id为div1的
+                var d1text = $('#div1').text();
+                console.log(d1text);
+                // 获取标签为div的元素
+                console.log($('div').text());
+            });
+            // 设置文本
+            $('#set').click(function () {
+                // 给id为div的设置文本
+                // $('#div1').text('设置的文本');
+                // 设置文本如果含有标签，不会解析标签
+                // 包含多个DOM元素的jQuery对象，设置文本会把所有元素都设置上
+                $('div').text('设置的文本');// 隐式迭代
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="获取" id="get">
+    <input type="button" value="设置" id="set">
+    <div id="div1" style="margin-top: 10px;">
+        我是一个div标签
+        <p>我是一个p标签</p>
+    </div>
+    <div> 我是一个div2标签
+        <p>我是一个p2标签</p>
+    </div>
+</body>
+
+</html>

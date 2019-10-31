@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>、
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        /**
+            id选择器 $('#id')           获取指定id的元素
+            类选择器 $('.class')        获取同一类class的元素
+            标签选择器 $('div')         获取同一类标签的所有元素
+            并集选择器 $('div,p,li')    使用逗号分隔，只要符合条件之一就可
+            交集选择器 $('div.redCass') 获取class为redClass的div元素
+       */
+        $(function () {
+            $('#slg').css('fontSize', 40);
+            $('.tz').css('fontSize', 30);
+            $('li').css('backgroundColor', 'red'),
+                $('.hf,.wsy').css('backgroundColor', 'white');
+            $('li.nj').css('backgroundColor', 'green');
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li id="slg">司令官</li>
+        </ul>
+        <ul id="dlt">
+            <li class="tz">独立团团长-李云龙</li>
+            <li>狙击手</li>
+            <li>士兵</li>
+            <li class="hf">伙夫</li>
+            <li class="wsy">卫生员</li>
+        </ul>
+        <ul id="t358">
+            <li class="tz">358团长-楚云飞</li>
+            <li>狙击手</li>
+            <li>士兵</li>
+            <li class="nj">士兵</li>
+            <li class="hf">伙夫</li>
+            <li class="wsy">卫生员</li>
+        </ul>
+    </div>
+    <div>
+        <p class="nj"> 老百姓</p>
+        <p class="nj"> 老百姓</p>
+        <p>老百姓</p>
+        <p>老百姓</p>
+        <p>老百姓</p>
+        <p>老百姓</p>
+    </div>
+</body>
+
+</html>
