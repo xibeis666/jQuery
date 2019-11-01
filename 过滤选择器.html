@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // :eq(index)  $('li:eq(2)') 获取到元素li中索引号为2的元素，索引号是从0开始
+        // :odd $('li:odd')  获取到li元素中，索引号为奇数的元素
+        // :even $('li:even') 获取到li元素中，索引号为偶数的元素
+        $(function () {
+            $('li:odd').css('backgroundColor', 'pink');
+            $('li:even').css('backgroundColor', 'skyblue');
+            $('li:eq(0),li:eq(9)').css('fontSize', '40px');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- ul>{我是第$个li标签}*10 -->
+
+    <ul>
+        <li>我是第1个li标签</li>
+        <li>我是第2个li标签</li>
+        <li>我是第3个li标签</li>
+        <li>我是第4个li标签</li>
+        <li>我是第5个li标签</li>
+        <li>我是第6个li标签</li>
+        <li>我是第7个li标签</li>
+        <li>我是第8个li标签</li>
+        <li>我是第9个li标签</li>
+        <li>我是第10个li标签</li>
+    </ul>
+</body>
+
+</html>
