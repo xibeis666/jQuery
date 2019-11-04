@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // 显示
+            $('#show').click(function(){
+                // $('#div1').show(2000);
+                $('#div1').show('fast');// 200毫秒
+                // $('#div1').show('normal');// 400毫秒
+                // $('#div1').show('slow');// 600毫秒 
+                // 如果代表时长的单词错误，相当于写了Normal
+                // $('#div1').show(2000,function(){
+                //     alert('动画执行完毕');
+                // });
+            });
+            // 隐藏
+            $('#hide').click(function(){
+                // $('#div1').hide(2000);
+                $('#div1').hide('fast');
+                // $('#div1').hide(2000,function(){
+                //     alert('动画执行完毕');
+                // });
+            });
+
+            $('#toggle').click(function(){
+                $('#div1').toggle(1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示" id="show" />
+    <input type="button" value="隐藏" id="hide" />
+    <input type="button" value="切换" id="toggle" /><br>
+    <div id="div1"></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .bgc {
+            background-color: green;
+        }
+
+        .fontSize30 {
+            font-size: 30px;
+        }
+
+        .width200 {
+            width: 200px;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // 添加类
+            $('#add').click(function () {
+                $('#div1').addClass('fontSize30');
+            });
+            // 移除类
+            $('#del').click(function () {
+                $('#div1').removeClass('fontSize30');
+            });
+            // 判断类
+            $('#has').click(function () {
+                if($('#div1').hasClass('fontSize30')) {
+                    alert('有此类');
+                } else {
+                    alert('无此类');
+                }
+            });
+            //  切换
+            $('#change').click(function () {
+                $('#div1').toggleClass('width200');
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="添加类" id="add">
+    <input type="button" value="移除类" id="del">
+    <input type="button" value="判断类" id="has">
+    <input type="button" value="切换" id="change">
+    <div id="div1" class="bgc">div1</div>
+</body>
+
+</html>

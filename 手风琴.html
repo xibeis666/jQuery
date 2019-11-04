@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .partWrap {
+            width: 200px;
+            text-align: center;
+        }
+
+        .meanGroup {
+            border: 1px solid #999;
+        }
+
+        .meanGroup>div {
+            height: 200px;
+            background-color: #fff;
+            display: none;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .groupTitle {
+            background: rgb(165, 197, 209);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            console.log($('.partWrap>.meanGroup'));
+
+            $('.partWrap>.meanGroup').click(function () {
+                $(this).children('div').show().parent().siblings('li').children('div').hide();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <ul class="partWrap">
+        <li class="meanGroup">
+            <span class="groupTitle">标题1</span>
+            <div>我是弹出来的div1</div>
+        </li>
+        <li class="meanGroup">
+            <span class="groupTitle">标题2</span>
+            <div>我是弹出来的div2</div>
+        </li>
+        <li class="meanGroup">
+            <span class="groupTitle">标题3</span>
+            <div>我是弹出来的div3</div>
+        </li>
+        <li class="meanGroup">
+            <span class="groupTitle">标题4</span>
+            <div>我是弹出来的div4</div>
+        </li>
+    </ul>
+
+</body>
+
+</html>
