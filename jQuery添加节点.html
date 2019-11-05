@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // append
+            $('#btn1').click(function () {
+                // var $liNew = $('<li>我是新创建的li标签</li>');
+                // $('#ul1').append($liNew);
+
+                // var $li3 = $('#li3');
+                // $('#ul1').append($li3);
+
+                var $li32 = $('#li32');
+                $('#ul1').append($li32);
+            });
+            $('#btn2').click(function () {
+                // var $liNew = $('<li>我是新创建的li标签</li>');
+                // $('#ul1').prepend($liNew);
+
+                // var $li3 = $('#li3');
+                // $('#ul1').prepend($li3);
+
+                var $li32 = $('#li32');
+                $('#ul1').prepend($li32);
+            });
+            $('#btn3').click(function () {
+                // var $liNew = $('<li>我是新创建的li标签</li>');
+                // $('#ul1').after($liNew);
+
+                var $li3 = $('#li3');
+                $('#ul1').after($li3);
+
+                // var $li32 = $('#li32');
+                // $('#ul1').after($li32);
+
+            });
+            $('#btn4').click(function () {
+                var $liNew = $('<li>我是新创建的li标签</li>');
+                $('#ul1').before($liNew);
+
+                // var $li3 = $('#li3');
+                // $('#ul1').before($li3);
+
+                // var $li32 = $('#li32');
+                // $('#ul1').before($li32);
+
+            });
+            $('#btn5').click(function () {
+                var $liNew = $('<li>我是新创建的li标签</li>');
+                $($liNew).appendTo('#ul1');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="append" id="btn1">
+    <input type="button" value="prepend" id="btn2">
+    <input type="button" value="after" id="btn3">
+    <input type="button" value="before" id="btn4">
+    <input type="button" value="appendTo" id="btn5">
+
+    <ul id="ul1">
+        <li>我是第1个li标签</li>
+        <li>我是第2个li标签</li>
+        <li id="li3">我是第3个li标签</li>
+        <li>我是第4个li标签</li>
+        <li>我是第5个li标签</li>
+    </ul>
+    <ul id="ul2">
+        <li>我是第1个li标签</li>
+        <li>我是第2个li标签</li>
+        <li id="li32">我是第3个li标签</li>
+        <li>我是第4个li标签</li>
+        <li>我是第5个li标签</li>
+    </ul>
+</body>
+
+</html>

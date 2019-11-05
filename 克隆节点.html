@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            border: red 1px solid;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // clone()
+        // 参数不管是true还是false 都会克隆后代节点
+        // 参数为true 表示会把事件克隆
+        // false 表示不会克隆事件 不给参数，默认为false
+        $(function () {
+            $('#div1').click(function(){
+                alert('clicked');
+            });
+
+            $('#clone').click(function () {
+                // var $cloneDiv = $('#div1').clone(true);
+                var $cloneDiv = $('#div1').clone(false);
+                $cloneDiv.attr('id','div2');
+                $('body').append($cloneDiv);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="克隆" id="clone">
+    <div id="div1">
+        <span>span1</span>
+        <p>p1
+            <b>b1</b>
+        </p>
+        <br><br>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // 滑入
+            // slideDown(参数1,参数2)
+            // 参数1 动画执行时长 参数2 动画完成后的回调函数
+            $('#slideDown').click(function () {
+                // $('#div1').slideDown(); // 没参数相当于给了默认时长normal，代表的是400毫秒
+                $('#div1').slideDown(500, function () {
+                    alert('滑入完成');
+                });
+            });
+            // 滑出
+            $('#slideUp').click(function () {
+                $('#div1').slideUp(500);
+            });
+            // 切换
+            $('#slideToggle').click(function () {
+                $('#div1').slideToggle(1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="滑入" id="slideDown">
+    <input type="button" value="滑出" id="slideUp">
+    <input type="button" value="切换" id="slideToggle">
+    <div id="div1"></div>
+</body>
+
+</html>

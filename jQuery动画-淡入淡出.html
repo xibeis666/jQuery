@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        display: none;
+    }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // 淡入
+            $('#fadeIn').click(function(){
+                $('#div1').fadeIn(1000,function(){
+                    alert('淡入over');
+                });// 不给参数相当于给了一个默认动画时长normal，400毫秒
+            });
+            // 淡出
+            $('#fadeOut').click(function(){
+                $('#div1').fadeOut(1000);
+            });
+            // 切换
+            $('#fadeToggle').click(function(){
+                $('#div1').fadeToggle(1000);
+            });
+            // 淡入到哪里
+            $('#fadeTo').click(function(){
+                $('#div1').fadeTo(1000,0.5);
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="淡入" id="fadeIn">
+    <input type="button" value="淡出" id="fadeOut">
+    <input type="button" value="切换" id="fadeToggle">
+    <input type="button" value="淡入到哪里" id="fadeTo">
+    <div id="div1"></div>
+</body>
+</html>

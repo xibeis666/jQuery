@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                // $('ul').empty();
+                // $('#li3').remove(); 自杀
+
+                $('#li3').parent().remove();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="清除节点" id="btn">
+    <ul>
+        <li>第1个li标签</li>
+        <li>第2个li标签</li>
+        <li id="li3">第3个li标签</li>
+        <li>第4个li标签</li>
+        <li>第5个li标签</li>
+    </ul>
+</body>
+
+</html>
