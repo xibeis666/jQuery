@@ -16,9 +16,9 @@
     </style>
     <script src="jquery-3.4.1.js"></script>
     <script>
-        $(function(){
+        $(function () {
             // 显示
-            $('#show').click(function(){
+            $('#show').click(function () {
                 // $('#div1').show(2000);
                 $('#div1').show('fast');// 200毫秒
                 // $('#div1').show('normal');// 400毫秒
@@ -29,15 +29,17 @@
                 // });
             });
             // 隐藏
-            $('#hide').click(function(){
+            $('#hide').click(function () {
                 // $('#div1').hide(2000);
-                $('#div1').hide('fast');
+                // $('#div1').hide('fast');
+                // $('#div1').hide('normal');
+                $('#div1').hide('slow');
                 // $('#div1').hide(2000,function(){
                 //     alert('动画执行完毕');
                 // });
             });
 
-            $('#toggle').click(function(){
+            $('#toggle').click(function () {
                 $('#div1').toggle(1000);
             });
         });
