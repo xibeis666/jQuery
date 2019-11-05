@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 400px;
+            background-color: tomato;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // stop() 停止动画
+        // 参数一：是否清除队列
+        // 参数二：是否跳转到最终效果
+    $(function(){
+        $('#show').click(function(){
+            $('div').slideDown(2000).slideUp(2000);
+        });
+
+        $('#stop').click(function(){
+            $('div').stop(true,true);
+            $('div').stop(false,true);
+            $('div').stop(true,false);
+            $('div').stop(false,false);
+            $('div').stop();// 默认2个false
+        });
+    });
+    </script>
+</head>
+<body>
+    <input type="button" value="开始" id="show">
+    <input type="button" value="停止" id="stop">
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 0px;
+        }
+
+        #div1 {
+            top: 50px;
+        }
+
+        #div2 {
+            top: 280px;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // 自定义动画 animate()
+        // 参数1：必选的 对象 代表的是需要做动画的属性
+        // 参数2：可选的 代表执行动画的时长
+        // 参数3：可选的 easing 代表的是缓动还是匀速 linear(匀速) swing(缓动)
+        // 参数4：动画执行完毕后的回调函数
+        $(function () {
+            $('#Ir800').click(function () {
+                $('#div1').animate({
+                    left: 800
+                }, 2000, 'linear');
+            });
+
+
+            $('#Ir800').click(function () {
+                $('#div2').animate({
+                    left: 800,
+                    width:200,
+                    height: 200,
+                    top:350,
+                    opcity: 0.5
+                }, 2000, 'swing',function(){
+                    $('#div2').animate({
+                        left: 400,
+                        width: 300,
+                        height: 300,
+                    },2000)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="从左到右800" id="Ir800">
+    <div id="div1"></div><br>
+    <div id="div2"></div>
+</body>
+
+</html>
