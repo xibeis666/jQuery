@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $('#btn2').click(function () {
+                // $('img').attr('src', 'images/2.jpg');
+                // $('img').attr('aaa', '哈哈哈');
+                // $('img').attr('bbb', 'bbb');
+                // 设置多属性
+                $('img').attr({
+                    src: 'images/3.jpg',
+                    aaa: 'hahahha',
+                    bbb: 'bbb2'
+                });
+            });
+
+            $('#btn1').click(function () {
+                // alert($('img').attr('src'));
+                // alert($('img').attr('aaa'));
+                alert($('img').attr('bbb')); // 如果没有这个属性：undefind 如果有，就得到值 通过方法设置的属性，也可以得到
+            });
+
+            $('#btn3').click(function () {
+                // $('img').remove('alt');
+                // $('img').remove('aaa');
+                // $('img').remove('bbb');
+                $('img').remove('alt aaa bbb'); // 移除多属性
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="获取属性" id="btn1">
+    <input type="button" value="设置属性" id="btn2">
+    <input type="button" value="移除属性" id="btn3"><br>
+    <br><img src="images/1.jpg" alt="数字图片1" title="数字图片1" aaa='aaa'>
+</body>
+
+</html>
