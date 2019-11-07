@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 200px;
+            border: 10px solid salmon;
+            padding: 20px;
+            margin: 30px;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                // console.log($('#div1').height()); // 200
+                // 不包括padding和border和margin
+                // $('#div1').height('100'); 
+                // $('#div1').width('100');
+
+                // 包括内边距
+                // $('#div1').innerHeight('100'); 
+                // $('#div1').innerWidth('100');
+
+                // 包括内边距和边框
+                // $('#div1').outerWidth('100');
+                // $('#div1').outerHeight('100');
+                console.log($('#div1').outerWidth(true));
+                console.log($('#div1').outerHeight(false));
+
+
+                // 页面可视区宽高
+                // $(window).width();
+                // $(window).height();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+    <div id="div1" class="one" style="height: 200px;"></div>
+</body>
+
+</html>

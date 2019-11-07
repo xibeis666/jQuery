@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px gray solid;
+        }
+
+        th,
+        td {
+            border: 1px gray solid;
+        }
+
+        thead {
+            background-color: cornflowerblue;
+            color: white;
+            border: 1px gray solid;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $('thead input').click(function () {
+                $('tbody input').prop('checked', $('thead input').prop('checked'));
+            })
+
+            $('tbody input').click(function () {
+                var numOfAll = $('tbody input').length;
+                var numOfSelect = $('tbody input:checked').length;
+                $('thead input').prop('checked', numOfAll == numOfSelect);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" id="">
+                </th>
+                <th>
+                    课程名称
+                </th>
+                <th>
+                    所属学院
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>JavaScript</td>
+                <td>前端与移动开发学院</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>css</td>
+                <td>前端与移动开发学院</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>html</td>
+                <td>前端与移动开发学院</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>jQuery</td>
+                <td>前端与移动开发学院</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

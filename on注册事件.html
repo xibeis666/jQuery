@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        .one {
+            border: 1px solid red;
+        }
+
+        .two {
+            border: 1px solid green;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // on简单注册事件
+            $('div').on('click', function () {
+                console.log('1111单击事件');
+            });
+
+            // on委托注册
+            // 支持动态注册
+            $('body').on('click', 'div,span', function () {
+                console.log('22222单击事件');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+    <div id="one" class="one"></div>
+    <span style="border: green 1px solid;">span标签</span>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 2000px;
+            height: 2000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            overflow: auto;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                // 获取
+                // scrollLeft() 表示元素内容被卷曲出去的宽度
+                // scrollTop() 表示元素内容被卷曲出去的高度
+                // console.log('scrollLeft : ' + $('div').scrollLeft() + '   scrollTop : ' + $('div').scrollTop());
+
+                // 设置
+                // $('div').scrollLeft(165);
+                // $('div').scrollTop(135);
+
+                // 获取页面
+                console.log($(window).scrollTop());
+                console.log($(window).scrollLeft());
+
+                // 设置页面
+                // $(window).scrollTop(1000);
+                // $(window).scrollLeft(1000);
+            });
+        });
+    </script>
+</head>
+<input type="button" value="按钮" id="btn">
+<div>
+    <img src="images/7.jpg" alt="">
+</div>
+
+<body>
+
+</body>
+
+</html>
