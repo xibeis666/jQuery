@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .one {
+            border: steelblue solid 1px;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // 1什么是事件对象
+            // 注册一个事件，系统会帮我们生产一个对象记录这个事件触发时候的一些信息
+            // 比如触发事件的时候有没有按住某个键，再入触发这个事件的时候一些坐标信息。。。
+            // jQuery中用事件参数e来获取
+            // jQuery的事件对象是对原生js事件对象的一个封装，帮你处理好了兼容性
+            $('#one').on('click', function (e) {
+                // console.log(e);
+                console.log('screenX' + e.screenX + 'screenY' + e.screenY);
+                console.log('pageX' + e.pageX + 'pageY' + e.pageY);
+                console.log('clientX' + e.clientX + 'clientY' + e.clientY);
+            });
+            // e.stopPropagation()  阻止事件冒泡
+            // e.preventDefault() 阻止默认行为 如 a标签跳转
+            // return false 阻止事件冒泡又能阻止默认行为
+        });
+    </script>
+</head>
+
+<body>
+    <div id="one" class="one">
+        <input type="button" value="按钮" id="btn">
+        <br><br>
+        <a href="http://www.baidu.com">百度一下，你就知道</a>
+    </div>
+</body>
+
+</html>

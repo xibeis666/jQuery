@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li {
+            float: left;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background: pink;
+            margin: 0 20px 20px 0;
+            line-height: 200px;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            var $lis = $('#ulList').children();
+            $lis.each(function (index, element) {
+                $(element).css('opacity', index / 10);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <ul id="ulList">
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+    </ul>
+</body>
+
+</html>
